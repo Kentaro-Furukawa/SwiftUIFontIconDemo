@@ -11,6 +11,8 @@
 		F1C9CE092A90B5EB00325EDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C9CE082A90B5EB00325EDA /* ContentView.swift */; };
 		F1C9CE0B2A90B5EC00325EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C9CE0A2A90B5EC00325EDA /* Assets.xcassets */; };
 		F1C9CE0E2A90B5EC00325EDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C9CE0D2A90B5EC00325EDA /* Preview Assets.xcassets */; };
+		F1C9CE162A90B65200325EDA /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = F1C9CE152A90B65200325EDA /* SwiftUIFontIcon */; };
+		F1C9CE192A90B6ED00325EDA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C9CE182A90B6ED00325EDA /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		F1C9CE082A90B5EB00325EDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1C9CE0A2A90B5EC00325EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1C9CE0D2A90B5EC00325EDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1C9CE182A90B6ED00325EDA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C9CE192A90B6ED00325EDA /* SwiftUI.framework in Frameworks */,
+				F1C9CE162A90B65200325EDA /* SwiftUIFontIcon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,7 @@
 			children = (
 				F1C9CE052A90B5EB00325EDA /* SwiftUIFontIconDemo */,
 				F1C9CE042A90B5EB00325EDA /* Products */,
+				F1C9CE172A90B6ED00325EDA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +73,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F1C9CE172A90B6ED00325EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1C9CE182A90B6ED00325EDA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +97,9 @@
 			dependencies = (
 			);
 			name = SwiftUIFontIconDemo;
+			packageProductDependencies = (
+				F1C9CE152A90B65200325EDA /* SwiftUIFontIcon */,
+			);
 			productName = SwiftUIFontIconDemo;
 			productReference = F1C9CE032A90B5EB00325EDA /* SwiftUIFontIconDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = F1C9CDFA2A90B5EB00325EDA;
+			packageReferences = (
+				F1C9CE142A90B65200325EDA /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */,
+			);
 			productRefGroup = F1C9CE042A90B5EB00325EDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1C9CE142A90B65200325EDA /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huybuidac/SwiftUIFontIcon";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1C9CE152A90B65200325EDA /* SwiftUIFontIcon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1C9CE142A90B65200325EDA /* XCRemoteSwiftPackageReference "SwiftUIFontIcon" */;
+			productName = SwiftUIFontIcon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1C9CDFB2A90B5EB00325EDA /* Project object */;
 }

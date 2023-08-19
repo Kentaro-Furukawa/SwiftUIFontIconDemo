@@ -6,16 +6,27 @@
 //
 
 import SwiftUI
+import SwiftUIFontIcon
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        HStack {
+            
+            FontIcon.text(.materialIcon(code: .access_alarm))
+            
+            FontIcon.text(.materialIcon(code: .access_alarm), fontsize: 30)
+            
+            FontIcon.text(.awesome5Solid(code: .thumbs_up), fontsize: 50)
+                .foregroundColor(.yellow)
+            
+            FontIcon.button(.ionicon(code: .md_add_circle), action: {})
+            
+            FontIcon.button(.materialIcon(code: .settings), action: {}, padding: 8)
+                .background(RoundedRectangle(cornerRadius: 4).foregroundColor(.green))
+            
         }
-        .padding()
+        
     }
 }
 
